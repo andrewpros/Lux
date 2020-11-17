@@ -54,6 +54,7 @@
     <ClCompile Include="SourcesViewModel.cpp">
       <Filter>ViewModel</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

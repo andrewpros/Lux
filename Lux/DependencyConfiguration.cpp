@@ -30,12 +30,7 @@ namespace Lux
 
   Infrastructure::dependency_container& DependencyConfiguration::Instance()
   {
-    static unordered_map<uint32_t, unique_ptr<DependencyConfiguration>> configurations;
-    auto& configuration = configurations[GetCurrentThreadId()];
-    if (!configuration)
-    {
-      configuration = unique_ptr<DependencyConfiguration>{ new DependencyConfiguration() };
-    }
-    return configuration->_container;
+    static DependencyConfiguration configuration{};
+    return configuration._container;
   }
 }
